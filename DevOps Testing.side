@@ -1,0 +1,700 @@
+{
+  "id": "9d3d7682-042c-4f54-9668-a0a36d02edfe",
+  "version": "2.0",
+  "name": "DevOps Testing",
+  "url": "https://www.zkb.ch",
+  "tests": [{
+    "id": "c4ffa277-8dc3-47f3-bc47-f17f2e099e9c",
+    "name": "ZKB eBanking Login und Search",
+    "commands": [{
+      "id": "7761973e-d365-4d7e-89d8-4497b574d1a8",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "95278647-4d51-411f-9859-4cee7fc3136f",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "2560x1415",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7463acc7-c091-47f1-9776-32857f5b2859",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Digitales Banking",
+      "targets": [
+        ["linkText=Digitales Banking", "linkText"],
+        ["css=.c-header-page-topic-navigation__item:nth-child(6) > .c-header-page-topic-navigation__link", "css:finder"],
+        ["xpath=//a[contains(text(),'Digitales Banking')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/de/private/digitales-banking.html')]", "xpath:href"],
+        ["xpath=//nav/div/div[2]/div/ul/li[6]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Digitales Banking')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "90618c67-5355-45e8-bb99-7bb0ecd088b7",
+      "comment": "",
+      "command": "click",
+      "target": "css=#menu-5675cfdc13 > .c-side-menu-items__item:nth-child(2) > .c-side-menu-items__link",
+      "targets": [
+        ["css=#menu-5675cfdc13 > .c-side-menu-items__item:nth-child(2) > .c-side-menu-items__link", "css:finder"],
+        ["xpath=//a[contains(text(),'eBanking')]", "xpath:link"],
+        ["xpath=//ul[@id='menu-5675cfdc13']/li[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/de/private/digitales-banking/ebanking.html')]", "xpath:href"],
+        ["xpath=//li[6]/div/div/div/div/div/div[2]/div/ul/li[2]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "29a381f6-5ebe-4499-839a-524eafe09824",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Suche",
+      "targets": [
+        ["linkText=Suche", "linkText"],
+        ["css=.c-header-page-service-navigation__item:nth-child(3) > .c-header-page-service-navigation__link", "css:finder"],
+        ["xpath=//a[contains(@href, '/de/suche.html/de/private')]", "xpath:href"],
+        ["xpath=//li[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,' Suche')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "8829ccf9-8c23-4695-8222-97ab7515e157",
+      "comment": "",
+      "command": "type",
+      "target": "name=q",
+      "targets": [
+        ["name=q", "name"],
+        ["css=.c-input-search__input", "css:finder"],
+        ["xpath=//input[@name='q']", "xpath:attributes"],
+        ["xpath=//div[@id='search-result']/div/div[2]/div/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "ebanking login"
+    }, {
+      "id": "369a64f9-ab5e-447f-a757-3d7b59bda32f",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "name=q",
+      "targets": [
+        ["name=q", "name"],
+        ["css=.c-input-search__input", "css:finder"],
+        ["xpath=//input[@name='q']", "xpath:attributes"],
+        ["xpath=//div[@id='search-result']/div/div[2]/div/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "${KEY_ENTER}"
+    }, {
+      "id": "793833b0-5844-47f6-94b1-a8a356d8daa6",
+      "comment": "",
+      "command": "click",
+      "target": "css=.c-search-result:nth-child(2) .c-search-result__title",
+      "targets": [
+        ["css=.c-search-result:nth-child(2) .c-search-result__title", "css:finder"],
+        ["xpath=//div[@id='search-result']/div/div[2]/div/div[2]/div/div[2]/article[2]/a/h1", "xpath:idRelative"],
+        ["xpath=//article[2]/a/h1", "xpath:position"],
+        ["xpath=//h1[contains(.,'eBanking')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "26f956cd-8ce0-41a4-b5bf-a95d3fdb2524",
+      "comment": "",
+      "command": "click",
+      "target": "css=.l-stack:nth-child(3) .t-strong",
+      "targets": [
+        ["css=.l-stack:nth-child(3) .t-strong", "css:finder"],
+        ["xpath=//div[2]/div/div/a/div/span/strong", "xpath:position"],
+        ["xpath=//strong[contains(.,'Zum Login')]", "xpath:innerText"]
+      ],
+      "value": "",
+      "opensWindow": true,
+      "windowHandleName": "win2202",
+      "windowTimeout": 2000
+    }, {
+      "id": "5491a69d-f9af-4c36-a4cc-2186c87cded2",
+      "comment": "",
+      "command": "storeWindowHandle",
+      "target": "root",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4a4317af-ac78-474c-b3f0-54789ab6f3f7",
+      "comment": "",
+      "command": "selectWindow",
+      "target": "handle=${win2202}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c77a377f-c5d0-4d23-bf44-687e78c78789",
+      "comment": "",
+      "command": "selectWindow",
+      "target": "handle=${root}",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "1cede073-65fd-49fa-be50-1862b561f724",
+    "name": "ZKB Produktberater",
+    "commands": [{
+      "id": "568d693a-5608-4ddf-a71e-2c6322d8ab19",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "fd7b1e8f-9e72-446c-bffb-bb329f5336b9",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "2560x1415",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "729e22e5-57d2-4f25-a785-1bf3941b4614",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Konten und Karten",
+      "targets": [
+        ["linkText=Konten und Karten", "linkText"],
+        ["css=.c-header-page-topic-navigation__item:nth-child(1) > .c-header-page-topic-navigation__link", "css:finder"],
+        ["xpath=//a[contains(text(),'Konten und Karten')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/de/private/konten-karten.html')]", "xpath:href"],
+        ["xpath=//div[2]/div/ul/li/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Konten und Karten')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "64d8eb39-c7a3-42de-a290-f7441b3b8040",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Online Produktberatung",
+      "targets": [
+        ["linkText=Online Produktberatung", "linkText"],
+        ["css=.c-header-page-topic-navigation__item:nth-child(1) .c-flyout-menu__content:nth-child(2) li:nth-child(1) > .t-link:nth-child(1)", "css:finder"],
+        ["xpath=//a[contains(text(),'Online Produktberatung')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/de/private/konten-karten/rechner-hilfsmittel/produktberater.html')]", "xpath:href"],
+        ["xpath=//div[2]/div/div/div/ul/li/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Online Produktberatung')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "4253f454-5b49-4fc8-987b-81b96710d85f",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "linkText=Online Produktberatung",
+      "targets": [
+        ["linkText=Online Produktberatung", "linkText"],
+        ["css=.c-header-page-topic-navigation__item:nth-child(1) .c-flyout-menu__content:nth-child(2) li:nth-child(1) > .t-link:nth-child(1)", "css:finder"],
+        ["xpath=//a[contains(text(),'Online Produktberatung')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/de/private/konten-karten/rechner-hilfsmittel/produktberater.html')]", "xpath:href"],
+        ["xpath=//div[2]/div/div/div/ul/li/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Online Produktberatung')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "9d07b875-9fef-45b0-b559-33401067e490",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "linkText=Online Produktberatung",
+      "targets": [
+        ["linkText=Online Produktberatung", "linkText"],
+        ["css=.c-header-page-topic-navigation__item:nth-child(1) .c-flyout-menu__content:nth-child(2) li:nth-child(1) > .t-link:nth-child(1)", "css:finder"],
+        ["xpath=//a[contains(text(),'Online Produktberatung')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/de/private/konten-karten/rechner-hilfsmittel/produktberater.html')]", "xpath:href"],
+        ["xpath=//div[2]/div/div/div/ul/li/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Online Produktberatung')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "df6b48b5-27e4-4ee2-a771-936f080c93c0",
+      "comment": "",
+      "command": "click",
+      "target": "css=.c-select-grid-item:nth-child(5) .c-select-grid-item__content",
+      "targets": [
+        ["css=.c-select-grid-item:nth-child(5) .c-select-grid-item__content", "css:finder"],
+        ["xpath=//div[5]/label/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Für Träume sparen')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "c864f556-1572-4e51-81be-0b616519ad6a",
+      "comment": "",
+      "command": "click",
+      "target": "css=.c-select-grid-item:nth-child(4) > .c-select-grid-item__content-wrap",
+      "targets": [
+        ["css=.c-select-grid-item:nth-child(4) > .c-select-grid-item__content-wrap", "css:finder"],
+        ["xpath=//div[4]/label", "xpath:position"],
+        ["xpath=//label[contains(.,'Auf Reisen bezahlen')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "c9854ae3-d6eb-48e4-b3a6-e2240d3ebc5f",
+      "comment": "",
+      "command": "click",
+      "target": "css=.c-select-grid-item:nth-child(3) > .c-select-grid-item__content-wrap",
+      "targets": [
+        ["css=.c-select-grid-item:nth-child(3) > .c-select-grid-item__content-wrap", "css:finder"],
+        ["xpath=//div[3]/label", "xpath:position"],
+        ["xpath=//label[contains(.,'In Online-Shops bezahlen')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "b85cdcff-f3d8-4e3a-add7-61fd13943cfe",
+      "comment": "",
+      "command": "click",
+      "target": "css=.c-button--primary > .c-button__label:nth-child(1)",
+      "targets": [
+        ["css=.c-button--primary > .c-button__label:nth-child(1)", "css:finder"],
+        ["xpath=//zkb-progress-indicator-actions/div/div/div/button[2]/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Weiter')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "62c492a5-5104-45e4-9e89-b4da7406d76e",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.c-button--primary > .c-button__label:nth-child(1)",
+      "targets": [
+        ["css=.c-button--primary > .c-button__label:nth-child(1)", "css:finder"],
+        ["xpath=//zkb-progress-indicator-actions/div/div/div/button[2]/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Weiter')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "0517858d-4725-41c6-8a68-24fcceb0b068",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "css=.c-button--primary > .c-button__label:nth-child(1)",
+      "targets": [
+        ["css=.c-button--primary > .c-button__label:nth-child(1)", "css:finder"],
+        ["xpath=//zkb-progress-indicator-actions/div/div/div/button[2]/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Weiter')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "6ba0c5f4-c1d5-4a94-9aed-25d65d4e99da",
+      "comment": "",
+      "command": "click",
+      "target": "css=zkb-select-grid:nth-child(3) .c-select-grid-item:nth-child(1) .c-select-grid-item__content",
+      "targets": [
+        ["css=zkb-select-grid:nth-child(3) .c-select-grid-item:nth-child(1) .c-select-grid-item__content", "css:finder"],
+        ["xpath=//label/span", "xpath:position"],
+        ["xpath=//span[contains(.,'An Geldautomaten')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "5b9fb0c7-510f-4b49-8f79-626a43241e63",
+      "comment": "",
+      "command": "click",
+      "target": "css=zkb-select-grid:nth-child(6) .c-select-grid-item:nth-child(1) > .c-select-grid-item__content-wrap",
+      "targets": [
+        ["css=zkb-select-grid:nth-child(6) .c-select-grid-item:nth-child(1) > .c-select-grid-item__content-wrap", "css:finder"],
+        ["xpath=//zkb-select-grid[2]/div/div/label", "xpath:position"],
+        ["xpath=//label[contains(.,'Via eBanking')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "7e6bc10b-58ff-45cb-ab48-04843ff2cb9a",
+      "comment": "",
+      "command": "click",
+      "target": "css=zkb-select-grid:nth-child(9) .c-select-grid-item:nth-child(1) .c-select-grid-item__content",
+      "targets": [
+        ["css=zkb-select-grid:nth-child(9) .c-select-grid-item:nth-child(1) .c-select-grid-item__content", "css:finder"],
+        ["xpath=//zkb-select-grid[3]/div/div/label/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e92ce601-75b2-40ac-ad4d-ba4804331882",
+      "comment": "",
+      "command": "click",
+      "target": "css=.c-button--primary > .c-button__label:nth-child(1)",
+      "targets": [
+        ["css=.c-button--primary > .c-button__label:nth-child(1)", "css:finder"],
+        ["xpath=//zkb-progress-indicator-actions/div/div/div/button[2]/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Weiter')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "89b664a2-3c6c-43df-ace1-07b1da7849a8",
+      "comment": "",
+      "command": "click",
+      "target": "css=.c-select-grid-item:nth-child(1) .c-select-grid-item__content",
+      "targets": [
+        ["css=.c-select-grid-item:nth-child(1) .c-select-grid-item__content", "css:finder"],
+        ["xpath=//label/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Reiseversicherung')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "deb4fc7f-734f-4317-b835-d522bb5b1908",
+      "comment": "",
+      "command": "click",
+      "target": "css=.c-progress-navigation-actions__action-button-text > .c-button--primary",
+      "targets": [
+        ["css=.c-progress-navigation-actions__action-button-text > .c-button--primary", "css:finder"],
+        ["xpath=(//button[@type='button'])[4]", "xpath:attributes"],
+        ["xpath=//zkb-progress-indicator-actions/div/div/div/button[2]", "xpath:position"],
+        ["xpath=//button[contains(.,'Weiter')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "cae44205-688d-4701-9caa-c93f85599bf8",
+      "comment": "",
+      "command": "click",
+      "target": "css=.c-field__wrap > #alter",
+      "targets": [
+        ["css=.c-field__wrap > #alter", "css:finder"],
+        ["xpath=//input[@id='alter']", "xpath:attributes"],
+        ["xpath=//zkb-int[@id='alter']/div/label/span/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b98d21f6-bdc1-485e-a65b-05c2e4f85322",
+      "comment": "",
+      "command": "type",
+      "target": "css=.c-field__wrap > #alter",
+      "targets": [
+        ["css=.c-field__wrap > #alter", "css:finder"],
+        ["xpath=//input[@id='alter']", "xpath:attributes"],
+        ["xpath=//zkb-int[@id='alter']/div/label/span/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "30"
+    }, {
+      "id": "37f91dfd-dba5-40b5-963b-38ed17b7342b",
+      "comment": "",
+      "command": "click",
+      "target": "css=.c-progress-navigation-actions__action-button-text > .c-button--primary",
+      "targets": [
+        ["css=.c-progress-navigation-actions__action-button-text > .c-button--primary", "css:finder"],
+        ["xpath=(//button[@type='button'])[5]", "xpath:attributes"],
+        ["xpath=//zkb-progress-indicator-actions/div/div/div/button[2]", "xpath:position"],
+        ["xpath=//button[contains(.,'Produkte anzeigen')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "fe66e8f7-d818-41f1-aa1d-951f75b36e29",
+      "comment": "",
+      "command": "click",
+      "target": "css=.c-sticker-container",
+      "targets": [
+        ["css=.c-sticker-container", "css:finder"],
+        ["xpath=//common-page-layout/div/div[2]/div/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "afa65e72-6124-465e-a10b-a43c058658ef",
+      "comment": "",
+      "command": "click",
+      "target": "css=.t-paragraph:nth-child(2)",
+      "targets": [
+        ["css=.t-paragraph:nth-child(2)", "css:finder"],
+        ["xpath=//common-page-layout/div/div[2]/div/div/div[2]/p", "xpath:position"],
+        ["xpath=//p[contains(.,'Profitieren Sie vom Upgrade mit ZKB inklusiv Gold: das Sorgenfrei-Paket für alle, die oft reisen und einkaufen.')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "7c7a5836-a77f-4fb1-9199-252160cc659c",
+      "comment": "",
+      "command": "click",
+      "target": "css=.c-compare-table__action-section:nth-child(5) .c-button__label",
+      "targets": [
+        ["css=.c-compare-table__action-section:nth-child(5) .c-button__label", "css:finder"],
+        ["xpath=//div/div[2]/div/div/div/div[3]/button/span", "xpath:position"],
+        ["xpath=//span[contains(.,'In den Warenkorb')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "ef97ba76-55fd-4acc-b057-55dc9d7bf211",
+      "comment": "",
+      "command": "click",
+      "target": "css=.c-toggle:nth-child(1) .c-toggle__indicator",
+      "targets": [
+        ["css=.c-toggle:nth-child(1) .c-toggle__indicator", "css:finder"],
+        ["xpath=//label/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2b304bf3-c5f5-42ef-8fc1-3df9bc0b47d3",
+      "comment": "",
+      "command": "",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6fe82f3d-f6cd-4e17-9a53-c8291454685c",
+      "comment": "",
+      "command": "click",
+      "target": "css=.c-select-grid-item:nth-child(4) .c-select-grid-item__content",
+      "targets": [
+        ["css=.c-select-grid-item:nth-child(4) .c-select-grid-item__content", "css:finder"],
+        ["xpath=//div[4]/label/span", "xpath:position"],
+        ["xpath=//span[contains(.,'eBanking für mich')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "8136678b-28df-4aa5-ac2f-bd6295d268d6",
+      "comment": "",
+      "command": "click",
+      "target": "css=.c-select-grid-item:nth-child(5) > .c-select-grid-item__content-wrap",
+      "targets": [
+        ["css=.c-select-grid-item:nth-child(5) > .c-select-grid-item__content-wrap", "css:finder"],
+        ["xpath=//div[5]/label", "xpath:position"],
+        ["xpath=//label[contains(.,'Vollmacht')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "b14b0766-e392-48fa-8105-e6f80c2b4d0a",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,1089)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b7a25f22-9203-44c1-87a8-0123cdd91495",
+      "comment": "",
+      "command": "click",
+      "target": "css=.c-header-process__exit",
+      "targets": [
+        ["css=.c-header-process__exit", "css:finder"],
+        ["xpath=//a[contains(@href, '#')]", "xpath:href"],
+        ["xpath=//a[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "0d9c1173-c5e2-420d-a9cb-2129e97943b7",
+      "comment": "",
+      "command": "click",
+      "target": "css=.c-button--secondary > .c-button__label",
+      "targets": [
+        ["css=.c-button--secondary > .c-button__label", "css:finder"],
+        ["xpath=//div[3]/button/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Bestellung fortsetzen')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "fbb9105b-023b-4029-a3e5-70167f19ad58",
+      "comment": "",
+      "command": "click",
+      "target": "css=.c-header-process__exit",
+      "targets": [
+        ["css=.c-header-process__exit", "css:finder"],
+        ["xpath=//a[contains(@href, '#')]", "xpath:href"],
+        ["xpath=//a[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a7f438d6-0be2-40b3-a5f6-f14f00dc5474",
+      "comment": "",
+      "command": "click",
+      "target": "css=.c-modal__footer",
+      "targets": [
+        ["css=.c-modal__footer", "css:finder"],
+        ["xpath=//div[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4d17e9b8-a063-4987-8036-8e6686e1e909",
+      "comment": "",
+      "command": "click",
+      "target": "css=.c-button:nth-child(2)",
+      "targets": [
+        ["css=.c-button:nth-child(2)", "css:finder"],
+        ["xpath=//button[2]", "xpath:position"],
+        ["xpath=//button[contains(.,'Bestellung abbrechen')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "ba07c549-a02b-45ad-b710-662ff7151c94",
+    "name": "ZKB Legal Contents",
+    "commands": [{
+      "id": "5fd7c82b-7cf4-4360-b130-be4123e28785",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4550a926-c803-4e7b-b014-4ada193b9392",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "2560x1415",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "34427167-418d-41f5-b668-14a38427c986",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,1598)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a337d975-7f27-431b-8b38-b24f8bf40a84",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,3455)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f03c07fb-130c-4d69-bffd-2d80e21a49fb",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,5013)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7eb290f5-5865-404d-bf0e-2c44afff8c52",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,6383)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0227556f-7a75-44a4-963a-d6c872d1a8c1",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Rechtliches",
+      "targets": [
+        ["linkText=Rechtliches", "linkText"],
+        ["css=.c-footer__list-item:nth-child(2) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Rechtliches')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/de/rechtliches.html')]", "xpath:href"],
+        ["xpath=//aside/ul/li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Rechtliches')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "637068cc-4d75-4377-be14-03305d844133",
+      "comment": "",
+      "command": "click",
+      "target": "css=.l-grid__cell:nth-child(1) > .c-hero-cta:nth-child(1) .c-hero-cta__lead",
+      "targets": [
+        ["css=.l-grid__cell:nth-child(1) > .c-hero-cta:nth-child(1) .c-hero-cta__lead", "css:finder"],
+        ["xpath=//article/p", "xpath:position"],
+        ["xpath=//p[contains(.,'Allgemeine Informationen zur Zürcher Kantonalbank.')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "f451c5ae-09b7-42f3-bf4c-32048758f4fb",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,2571)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "189c32cd-9763-416c-83a3-8bc6dc2d3c6d",
+      "comment": "",
+      "command": "click",
+      "target": "css=span",
+      "targets": [
+        ["css=span", "css:finder"],
+        ["xpath=//span", "xpath:position"],
+        ["xpath=//span[contains(.,'Zurück')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "eb80fa86-d83a-4d6a-815f-1cc498e30c34",
+      "comment": "",
+      "command": "click",
+      "target": "css=.l-grid__cell:nth-child(1) > .c-hero-cta:nth-child(2) > .c-hero-cta__article",
+      "targets": [
+        ["css=.l-grid__cell:nth-child(1) > .c-hero-cta:nth-child(2) > .c-hero-cta__article", "css:finder"],
+        ["xpath=//a[2]/article", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "3b3065b1-6c28-48c7-90fc-6711246cb127",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Allgemeine Geschäftsbedingungen (PDF, 2 MB)",
+      "targets": [
+        ["linkText=Allgemeine Geschäftsbedingungen (PDF, 2 MB)", "linkText"],
+        ["css=.text:nth-child(2) p:nth-child(2) > .t-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Allgemeine Geschäftsbedingungen (PDF, 2 MB)')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/media/zkb/dokumente/legal/allgemeine_geschaeftsbedingungen.pdf')]", "xpath:href"],
+        ["xpath=//p/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Allgemeine Geschäftsbedingungen (PDF, 2 MB)')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "e61617d1-0921-44b2-8546-56c7df699494",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "linkText=Allgemeine Geschäftsbedingungen (PDF, 2 MB)",
+      "targets": [
+        ["linkText=Allgemeine Geschäftsbedingungen (PDF, 2 MB)", "linkText"],
+        ["css=.text:nth-child(2) p:nth-child(2) > .t-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Allgemeine Geschäftsbedingungen (PDF, 2 MB)')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/media/zkb/dokumente/legal/allgemeine_geschaeftsbedingungen.pdf')]", "xpath:href"],
+        ["xpath=//p/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Allgemeine Geschäftsbedingungen (PDF, 2 MB)')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "17c367f8-2e92-4af2-8879-5e8995078d3a",
+      "comment": "",
+      "command": "click",
+      "target": "css=span",
+      "targets": [
+        ["css=span", "css:finder"],
+        ["xpath=//span", "xpath:position"],
+        ["xpath=//span[contains(.,'Zurück')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "a3e928e3-d799-447a-ba4c-3899dc2c6f2c",
+      "comment": "",
+      "command": "click",
+      "target": "css=.l-grid__cell:nth-child(2) > .c-hero-cta:nth-child(3) .c-hero-cta__title-text",
+      "targets": [
+        ["css=.l-grid__cell:nth-child(2) > .c-hero-cta:nth-child(3) .c-hero-cta__title-text", "css:finder"],
+        ["xpath=//div[2]/a[3]/article/h1/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Datenschutz')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "7baf298b-747d-49a7-ab63-b7b90483cdd0",
+      "comment": "",
+      "command": "click",
+      "target": "css=.l-grid__cell:nth-child(1) > .c-hero-cta:nth-child(1) .c-hero-cta__lead",
+      "targets": [
+        ["css=.l-grid__cell:nth-child(1) > .c-hero-cta:nth-child(1) .c-hero-cta__lead", "css:finder"],
+        ["xpath=//article/p", "xpath:position"],
+        ["xpath=//p[contains(.,'Die Datenschutzerklärung informiert, wie die Zürcher Kantonalbank mit Personendaten umgeht.')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "e0572307-0cc0-4e7b-a45c-5f9917c34a8f",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,4876)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "457155d5-27e5-498f-9249-9e13adb99499",
+      "comment": "",
+      "command": "click",
+      "target": "css=.c-header-process__exit",
+      "targets": [
+        ["css=.c-header-process__exit", "css:finder"],
+        ["xpath=//a[contains(@href, '/')]", "xpath:href"],
+        ["xpath=//a", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "ae2f1db0-40bc-4ff0-8196-22c6b6beddb8",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["c4ffa277-8dc3-47f3-bc47-f17f2e099e9c"]
+  }],
+  "urls": ["https://www.zkb.ch/"],
+  "plugins": []
+}
